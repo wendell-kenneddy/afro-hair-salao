@@ -34,7 +34,7 @@ header {
   position: relative;
 }
 
-header img {
+header a {
   position: absolute;
   left: 2.4rem;
 }
@@ -115,4 +115,44 @@ main form button {
 
 main form button:hover {
   background: var(--light-pink);
+}
+
+footer {
+  background: var(--light-pink);
+  padding: 1rem 0;
+  width: 100%;
+}
+
+footer h2 {
+  font-size: 2.4rem;
+  color: #fff;
+}
+
+footer .container {
+  width: 90vw;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+footer .contact-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+footer .container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+footer p {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 500;
 }
