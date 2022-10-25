@@ -27,21 +27,16 @@ body {
 header {
   background: var(--light-pink);
   width: 100%;
-  padding: 1rem 1.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  padding: 1rem 0;
 }
 
-header a {
-  position: absolute;
-  left: 2.4rem;
-}
-
-header div {
+header > div {
+  width: 90vw;
+  max-width: 720px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
 }
 
