@@ -19,6 +19,12 @@ textarea {
   --yellow: #ffd9a8;
 }
 
+.container {
+  width: 90vw;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
 header {
   background: var(--light-pink);
   width: 100%;
@@ -45,16 +51,19 @@ header span {
   display: block;
 }
 
-main section#callout {
+section p {
+  text-align: justify;
+}
+
+section#callout {
   background-image: linear-gradient(to right, var(--dark-pink), var(--yellow));
   padding: 1.8rem 2.4rem;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-main section#callout p {
+section#callout p {
   display: inline-block;
   font-size: 2rem;
   text-align: center;
@@ -63,8 +72,8 @@ main section#callout p {
   font-weight: 700;
 }
 
-main section#about {
-  padding: 1.8rem 2.4rem;
+section#about {
+  padding: 1.8rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,12 +82,12 @@ main section#about {
   text-align: center;
 }
 
-main section#about h2 {
+section#about h2 {
   color: var(--dark-pink);
 }
 
-main section#compromise {
-  padding: 1.8rem 2.4rem;
+section#compromise {
+  padding: 1.8rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,12 +96,12 @@ main section#compromise {
   text-align: center;
 }
 
-main section#compromise h2 {
+section#compromise h2 {
   color: var(--dark-pink);
 }
 
-main section#services {
-  padding: 1.8rem 2.4rem;
+section#services {
+  padding: 1.8rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,33 +110,31 @@ main section#services {
   text-align: center;
 }
 
-main section#services h2 {
+section#services h2 {
   display: inline-block;
   color: var(--dark-pink);
   margin-bottom: 2.4rem;
 }
 
-main section#services #cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+section#services #cards {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1.6rem;
 }
 
-main section#services .card {
+section#services .card {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1.2rem;
 }
 
-main section#services .card span {
+section#services .card span {
   color: var(--dark-pink);
   font-size: 1.4rem;
 }
 
-main section#staff {
+section#staff {
   padding: 1.8rem 2.4rem;
   display: flex;
   flex-direction: column;
@@ -137,13 +144,13 @@ main section#staff {
   text-align: center;
 }
 
-main section#staff h2 {
+section#staff h2 {
   display: inline-block;
   color: var(--dark-pink);
   margin-bottom: 2.4rem;
 }
 
-main #testimonials {
+#testimonials {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -151,12 +158,19 @@ main #testimonials {
   gap: 2.4rem;
 }
 
-main .testimonial {
+.testimonial {
   display: flex;
   align-items: center;
   gap: 1.2rem;
 }
 
-main .testimonial h3 {
+.testimonial h3 {
   color: var(--dark-pink);
+}
+
+@media (min-width: 768px) {
+  section#services #cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
